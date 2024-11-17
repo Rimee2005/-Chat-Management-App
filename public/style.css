@@ -1,0 +1,110 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Simple white background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+    color: #444;
+}
+
+/* Chat Container */
+.chat-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to the next row when space runs out */
+    justify-content: center; /* Center-align the cards */
+    gap: 50px; /* Increased space between cards */
+    max-width: 1200px; /* Limit container width for better layout */
+    margin: 20px auto; /* Center the container */
+    padding: 0 10px;
+}
+
+/* Chat Card */
+.chat {
+    background-color: #f9f9f9;
+    width: 200px; /* Smaller card size */
+    height: 200px;
+    border-radius: 20px; /* Curved corners for aesthetic look */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Message Styling */
+.chat .msg {
+    flex-grow: 1;
+    margin: 10px 0;
+    word-wrap: break-word; /* Prevent long messages from breaking the layout */
+}
+
+.chat p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.chat i {
+    font-style: italic;
+    color: #777;
+}
+
+/* Button Styling */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:active {
+    background-color: #2d6c31;
+}
+
+/* Button Group for Edit and Delete */
+.chat .msg form {
+    display: inline-block;
+    margin: 5px; /* Space between buttons */
+}
+
+/* Styling for the New Chats Form */
+form[methode="GET"] button {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+form[methode="GET"] button:hover {
+    background-color: #0056b3;
+}
